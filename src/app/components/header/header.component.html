@@ -9,29 +9,31 @@
 <header>
   <!-- Logo -->
   <div class="logo">
-    <img src="/src/assets/images/logo.png" alt="Logo">
+    <img src="..//src/assets/images/logo.png" alt="Logo">
   </div>
   <!-- Navigation menu -->
   <nav>
     <a href="#">JOUER</a>
+    <span class="separator"></span>
     <a href="#">CLASSEMENT</a>
+    <span class="separator"></span>
+    <a href="#">Déconnexion</a>
+    <span class="separator"></span>
   </nav>
-  <!-- image profile user -->
-  <div class="image_profile">
-    <img src="/assets/images/user1.png" alt="image profile">
-  </div>
-  <!-- Informations utilisateur -->
-  <div class="user-info">
+  <div class="profile">
+    <!-- image profile user -->
+    <div class="profile_image">
+    <img src="/assets/images/user1.png" alt="profile image">
+    </div>
+    <!-- Informations utilisateur -->
+    <div class="profile_info">
     <!-- Nom d'utilisateur -->
     <span th:text="${firstName}"></span>
 
     <!-- Lien vers le profil -->
     <a href="#">Profile link</a>
-
-    <!-- Lien de déconnexion -->
-    <a href="#">Déconnexion link</a>
+    </div>
   </div>
-
 </header>
 
 

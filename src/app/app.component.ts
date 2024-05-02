@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import { UserModel } from './models/user.model';
-import {UserService} from "./user.service";
+import { User } from './models/user';
+import {UserService} from "./services/user.service";
 import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
@@ -9,7 +9,7 @@ import {HttpErrorResponse} from "@angular/common/http";
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit{
-  public users!: UserModel[];// Marqué comme undefined
+  users!: User[];// Marqué comme undefined
 
   constructor(private userService: UserService) {}
 
@@ -19,7 +19,7 @@ export class AppComponent implements OnInit{
 
   public getUsers():void {
     this.userService.getUsers().subscribe(
-      (response:UserModel[]) => {
+      (response:User[]) => {
         this.users = response;
       },
       (error:HttpErrorResponse) => {

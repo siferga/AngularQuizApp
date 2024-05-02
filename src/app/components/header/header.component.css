@@ -4,13 +4,50 @@ body {
 }
 
 header {
-  background-color: #6a5494;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Distribute items along the main axis */
+  padding: 10px 20px; /* Add some padding */
+  background-color: #3318ad;
   color: #fff;
-  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
-
 .logo img {
   height: 100px;
   width: auto;
 }
+.logo, .nav, .user-info {
+  display: flex; /* Use flexbox for inner items */
+  align-items: center; /* Center items vertically */
+}
+.nav a {
+  margin-right: 20px;
+
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+
+/* Style for the separator */
+nav .separator::after {
+  content: "|"; /* Text content of the separator */
+  margin: 0 10px; /* Adjust spacing */
+  color: white; /* Color of the separator */
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile_image img {
+  height: 50px; /* Adjust the height of the profile image */
+  border-radius: 50%; /* image round */
+}
+
+.profile_info {
+  margin-left: 20px; /* Adjust the spacing between profile image and info */
+}
+
 

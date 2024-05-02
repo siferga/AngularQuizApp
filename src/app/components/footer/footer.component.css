@@ -1,0 +1,15 @@
+footer {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between; /* Distribute items along the main axis */
+  padding: 10px 20px; /* Add some padding */
+  background-color: #3318ad;
+  color: #fff;
+  min-height: auto;
+  font-family: 'Montserrat', sans-serif;
+}
+.separator::after {
+  content: "|"; /* Text content of the separator */
+  margin: 0 10px; /* Adjust spacing */
+  color: white; /* Color of the separator */
+}
