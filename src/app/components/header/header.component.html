@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+<header>
+  <!-- Logo -->
+  <div class="logo">
+    <img src="/src/assets/images/logo.png" alt="Logo">
+  </div>
+  <!-- Navigation menu -->
+  <nav>
+    <a href="#">JOUER</a>
+    <a href="#">CLASSEMENT</a>
+  </nav>
+  <!-- image profile user -->
+  <div class="image_profile">
+    <img src="/assets/images/user1.png" alt="image profile">
+  </div>
+  <!-- Informations utilisateur -->
+  <div class="user-info">
+    <!-- Nom d'utilisateur -->
+    <span th:text="${firstName}"></span>
+
+    <!-- Lien vers le profil -->
+    <a href="#">Profile link</a>
+
+    <!-- Lien de déconnexion -->
+    <a href="#">Déconnexion link</a>
+  </div>
+
+</header>
+
+

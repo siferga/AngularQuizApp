@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #6a5494;
+  color: #fff;
+  padding: 10px;
+}
+
+.logo img {
+  height: 100px;
+  width: auto;
+}
+
