@@ -7,6 +7,7 @@ import {User} from "../models/user";
 })
 export class UserService {
   private apiServeurUrl = '';
+  private signUpUrl = '/api/signup'; // Remplacez '/api/signup' par l'URL de votre endpoint de signup
 
   constructor(private http: HttpClient) { }
 
@@ -25,4 +26,11 @@ export class UserService {
     return this.http.delete<void>(`${this.apiServeurUrl}/collaborator/delete/${collaboratorId}`);
   }
 
+  signUp(user: User): Observable<any> {
+    return this.http.post<any>(this.signUpUrl, user);
+  }
+
 }
+
+
+
