@@ -16,16 +16,19 @@ import { SignUpComponent } from './components/sign-up/sign-up.component'; //Ajou
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    SignInComponent,
-    SignUpComponent
+    SignInComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        FormsModule,
-        //Ajouter le support HTTP Client
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    SignUpComponent,
+    SignUpComponent,
+
+
+    //Ajouter le support HTTP Client
+  ],
   providers: [UserService],
   bootstrap: [AppComponent]
 })

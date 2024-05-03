@@ -3,22 +3,28 @@ import { User } from './models/user';
 import {UserService} from "./services/user.service";
 import {HttpErrorResponse} from "@angular/common/http";
 import {NgForm} from "@angular/forms";
+import {SignInService} from "./services/sign-in.service";
+import { SignUpComponent } from "./components/sign-up/sign-up.component";
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+
 })
 export class AppComponent implements OnInit{
   users!: User[];// Marqué comme undefined
   editUser!: User;
+  afficherComposant() {
+
+  }
 
 
   emailError: string = '';
   passwordError: string = '';
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private signInService: SignInService) {}
 
   ngOnInit() {
     this.getUsers();
@@ -50,6 +56,18 @@ export class AppComponent implements OnInit{
     button.click();
     container.remove(button);*/
 
+  }
+  signIn(email: string, password: string): void {
+    this.signInService.signIn(email, password).subscribe(
+      response => {
+        // Handle successful sign-in response
+        console.log('Sign-in successful', response);
+      },
+      error => {
+        // Handle sign-in error
+        console.error('Sign-in failed', error);
+      }
+    );
   }
 
 }
