@@ -1,0 +1,28 @@
+<p>sign-up works!</p>
+
+<div class="container" id="container">
+  <div class="form-container sign-in-container">
+    <h1 class="title">Créer un compte</h1>
+    <form (ngSubmit)="onSubmit()">
+      <input type="text" name="first_name" [(ngModel)]="signUpForm.first_name" placeholder="Prénom" required>
+      <input type="text" name="last_name" [(ngModel)]="signUpForm.last_name" placeholder="Nom" required>
+      <input type="text" name="user_name" [(ngModel)]="signUpForm.user_name" placeholder="Pseudo" required>
+      <input type="email" name="email" [(ngModel)]="signUpForm.email" placeholder="Email" required autofocus>
+      <!-- Afficher les erreurs pour l'email -->
+   <!--
+      <input type="password" name="password" [(ngModel)]="signUpForm.password" placeholder="Mot de passe" required autofocus>-->
+      <!-- Afficher les erreurs pour le mot de passe -->
+      <!-- <p class="text-danger" *ngIf="passwordError">{{ passwordError }}</p>-->
+      <button class="signUpButton" type="submit">Sign Up</button>
+    </form>
+  </div>
+  <div class="overlay-container">
+    <div class="overlay">
+      <div class="overlay-panel overlay-right">
+        <h1>Bon retour parmi nous!</h1>
+        <p>Pour rester en contact avec nous, connecte-toi à l'aide de tes informations personnelles.</p>
+        <button class="ghost" id="signIn"><a class="signInLink" href="/User/user-profil">Sign In</a></button>
+      </div>
+    </div>
+  </div>
+</div>
