@@ -1,39 +1,4 @@
 <app-header></app-header>
-<div *ngFor="let user of users"><div>{{user.first_name}}</div></div><!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Sign up</title>
-</head>
-<body>
-<div class="container" id="container">
-  <div class="form-container sign-in-container">
-    <form th:action="@{/signUp}" th:object="${signUpForm}" method="POST">
-      <h1 class="title">Créer un compte</h1>
 
-      <input type="text" th:field="*{first_name}" placeholder="Prenom" />
-      <input type="text" th:field="*{last_name}" placeholder="Nom" />
-      <input type="text" th:field="*{user_name}" placeholder="Pseudo" />
-      <input type="email" th:field="*{email}" placeholder="Email" required autofocus/>
-      <p class="text-danger" style="display:none" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
-      <input type="password" th:field="*{password}" placeholder="Mot de passe" required autofocus/>
-      <p class="text-danger" style="display:none" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
 
-      <button class="signUpButton" type="submit">Sign Up</button>
-    </form>
-  </div>
-  <div class="overlay-container">
-    <div class="overlay">
-      <div class="overlay-panel overlay-right">
-        <h1>Bon retour parmi nous!</h1>
-        <p>Pour rester en contact avec nous, connecte-toi à l'aide de tes informations personnelles.</p>
-        <button class="ghost" id="signIn"><a class="signInLink" href="/User/user-profil">Sign In</a></button>
-      </div>
-    </div>
-  </div>
-</div>
-
-</body>
-</html>
 <app-footer></app-footer>
-
