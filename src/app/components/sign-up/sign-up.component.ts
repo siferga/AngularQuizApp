@@ -4,6 +4,7 @@ import { AuthService } from '../../services/auth.service';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
+  standalone: true,
   styleUrl: './sign-up.component.css'
 })
 export class SignUpComponent {

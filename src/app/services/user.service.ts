@@ -7,15 +7,15 @@ import {User} from "../models/user";
 })
 export class UserService {
   private apiServeurUrl = '';
-  private signUpUrl = '/api/signup'; // Remplacez '/api/signup' par l'URL de votre endpoint de signup
+  private signUpUrl = 'sign-up'; // Remplacez '/api/signup' par l'URL de votre endpoint de signup
 
   constructor(private http: HttpClient) { }
 
-  public getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.apiServeurUrl}/user/all`);
+  /*public getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`${this.apiServeurUrl}/`);
   }
   public addUser(user: User): Observable<User[]> {
-    return this.http.post<User[]>(`${this.apiServeurUrl}/user/add`, user);
+    return this.http.post<User[]>(`${this.apiServeurUrl}/add`, user);
   }
 
   public updateUser(user: User): Observable<User> {
@@ -24,7 +24,7 @@ export class UserService {
 
   public deleteCollaborators(collaboratorId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiServeurUrl}/collaborator/delete/${collaboratorId}`);
-  }
+  }*/
 
   signUp(user: User): Observable<any> {
     return this.http.post<any>(this.signUpUrl, user);
