@@ -20,7 +20,6 @@ export class AppComponent implements OnInit{
 
   }
 
-
   emailError: string = '';
   passwordError: string = '';
 
@@ -57,6 +56,7 @@ export class AppComponent implements OnInit{
     container.remove(button);*/
 
   }
+
   signIn(email: string, password: string): void {
     this.signInService.signIn(email, password).subscribe(
       response => {
