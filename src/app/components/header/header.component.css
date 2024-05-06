@@ -49,5 +49,30 @@ nav .separator::after {
 .profile_info {
   margin-left: 20px; /* Adjust the spacing between profile image and info */
 }
+/* Adjustments for horizontal navigation and removing default highlighting */
+nav ul {
+  display: flex; /* Make the list items display horizontally */
+  list-style-type: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+  margin-right: 20px; /* Add spacing between navigation items */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin from the last navigation item */
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+
+
 
 
