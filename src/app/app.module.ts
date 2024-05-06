@@ -17,10 +17,8 @@ import { ResultComponent } from './components/result/result.component'; //Ajoute
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     QuizComponent,
-    ResultComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -29,6 +27,9 @@ import { ResultComponent } from './components/result/result.component'; //Ajoute
     FormsModule,
     SignInComponent,
     SignUpComponent,
+    ResultComponent,
+    HeaderComponent,
+    FooterComponent,
     //Ajouter le support HTTP Client
   ],
   providers: [UserService, SignInService, SignUpService, FormsModule],
